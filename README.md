@@ -43,7 +43,7 @@ Syftet med projektet är att visa hur man kan arbeta med:
 ### 1. Klona repot
 
 ```bash
-git clone https://github.com/<ditt-användarnamn>/<repo-namn>.git
+git clone https://github.com/ProblemMaster/charts.git
 ```
 
 ### 2. Gå in i projektmappen
