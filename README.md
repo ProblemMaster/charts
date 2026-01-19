@@ -49,7 +49,7 @@ git clone https://github.com/ProblemMaster/charts.git
 ### 2. Gå in i projektmappen
 
 ```bash
-cd <repo-namn>
+cd .\charts\charts\
 ```
 
 ### 3. Installera beroenden
@@ -66,10 +66,10 @@ npm install
 npm run dev
 ```
 
-Applikationen startar då normalt på:
+Applikationen startar på:
 
 ```
-http://localhost:5173
+http://localhost:5175
 ```
 
 (Porten kan variera beroende på din setup.)
