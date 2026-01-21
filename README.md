@@ -99,13 +99,7 @@ Skapad som en skoluppgift i Vue.js.
 ## GitHub
 
 Länk till repository:
-👉 **(lägg in din GitHub-länk här innan inlämning)**
 
----
+https://github.com/ProblemMaster/charts/
 
-✅ Projektet uppfyller kraven på:
 
-* Två vyer
-* Extern API-hämtning
-* Två olika diagramtyper
-* Tydlig README med installation och körinstruktioner
