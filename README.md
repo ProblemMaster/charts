@@ -6,7 +6,7 @@ Detta projekt är en Vue-baserad webbapplikation som innehåller två separata v
    Användaren kan mata in sina betyg från 9:an och få dem visualiserade i ett **radardiagram**.
 
 2. **Väderdata för Mariehamn**
-   Applikationen hämtar väderdata från **Open-Meteo API** och visar **max- och min-temperaturer** för Mariehamn under de **senaste 9 dagarna** i ett **linjediagram**.
+   Applikationen hämtar väderdata från **Open-Meteo API** och visar **max- och min-temperaturer** för Mariehamn under de **senaste 10 dagarna** i ett **linjediagram**.
 
 ---
 
