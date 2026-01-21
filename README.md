@@ -8,13 +8,6 @@ Detta projekt är en Vue-baserad webbapplikation som innehåller två separata v
 2. **Väderdata för Mariehamn**
    Applikationen hämtar väderdata från **Open-Meteo API** och visar **max- och min-temperaturer** för Mariehamn under de **senaste 9 dagarna** i ett **linjediagram**.
 
-Syftet med projektet är att visa hur man kan arbeta med:
-
-* Vue (SPA med flera vyer)
-* API-anrop
-* Datavisualisering med diagram
-* Grundläggande state-hantering och komponentstruktur
-
 ---
 
 ## Funktioner
