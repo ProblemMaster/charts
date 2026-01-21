@@ -6,14 +6,7 @@ Detta projekt är en Vue-baserad webbapplikation som innehåller två separata v
    Användaren kan mata in sina betyg från 9:an och få dem visualiserade i ett **radardiagram**.
 
 2. **Väderdata för Mariehamn**
-   Applikationen hämtar väderdata från **Open-Meteo API** och visar **max- och min-temperaturer** för Mariehamn under de **senaste 9 dagarna** i ett **linjediagram**.
-
-Syftet med projektet är att visa hur man kan arbeta med:
-
-* Vue (SPA med flera vyer)
-* API-anrop
-* Datavisualisering med diagram
-* Grundläggande state-hantering och komponentstruktur
+   Applikationen hämtar väderdata från **Open-Meteo API** och visar **max- och min-temperaturer** för Mariehamn under de **senaste 10 dagarna** i ett **linjediagram**.
 
 ---
 
@@ -33,7 +26,7 @@ Syftet med projektet är att visa hur man kan arbeta med:
 * **Vue Router**
 * **Chart.js** (eller motsvarande diagram-bibliotek)
 * **Open-Meteo API**
-* JavaScript (ES6)
+* JavaScript 
 * HTML & CSS
 
 ---
@@ -49,7 +42,7 @@ git clone https://github.com/ProblemMaster/charts.git
 ### 2. Gå in i projektmappen
 
 ```bash
-cd <repo-namn>
+cd .\charts\charts\
 ```
 
 ### 3. Installera beroenden
@@ -66,10 +59,10 @@ npm install
 npm run dev
 ```
 
-Applikationen startar då normalt på:
+Applikationen startar på:
 
 ```
-http://localhost:5173
+http://localhost:5175
 ```
 
 (Porten kan variera beroende på din setup.)
@@ -82,7 +75,7 @@ Väderdata hämtas från **Open-Meteo**:
 
 * Plats: Mariehamn
 * Data: Daglig max- och min-temperatur
-* Tidsperiod: Senaste 9 dagarna
+* Tidsperiod: Senaste 10 dagarna
 * Ingen API-nyckel krävs
 
 ---
@@ -106,13 +99,7 @@ Skapad som en skoluppgift i Vue.js.
 ## GitHub
 
 Länk till repository:
-👉 **(lägg in din GitHub-länk här innan inlämning)**
 
----
+https://github.com/ProblemMaster/charts/
 
-✅ Projektet uppfyller kraven på:
 
-* Två vyer
-* Extern API-hämtning
-* Två olika diagramtyper
-* Tydlig README med installation och körinstruktioner
