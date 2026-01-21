@@ -18,6 +18,8 @@ const subjects = ref([
   {name: 'Hälsokunskap', grade: 4}
 ])
 
+const displayedSeries = ref([])
+
 // Inställningar för radardiagrammet
 const chartOptions = computed(() => ({
   chart: {
@@ -42,13 +44,23 @@ const chartOptions = computed(() => ({
   }
 }))
 
-// Serie till radardiagrammet
-const series = computed(() => [
-  {
-    name: 'Mina betyd',
-    data: subjects.value.map(subject => subject.grade)
-  }
-])
+// Funktion för att uppdatera diagrammet
+function updateChart() {
+  // Validera betygen 4-10
+  const validateGrades = subjects.value.map(subject => {
+    if (subject.grade < 4) subject.grade =4
+    if (subject.grade > 10) subject.grade = 10
+    return subject.grade
+  })
+
+  // Updatera diagrammet
+  displayedSeries.value = [
+    {
+      name: 'Mina betyg',
+      data: validateGrades
+    }
+  ]
+}
 </script>
 
 <template>
@@ -63,8 +75,13 @@ const series = computed(() => [
       </div>
     </div>
 
+    <!-- Knapp för att uppdatera diagram -->
+     <div class="button-container">
+      <button @click="updateChart">Visa i diagram</button>
+     </div>
+
     <!-- Radardiagram -->
-    <VueApexCharts type="radar" height="400" :options="chartOptions" :series="series" />
+    <VueApexCharts v-if="displayedSeries.length" type="radar" height="400" :options="chartOptions" :series="displayedSeries" />
   </div>
 </template>
 
@@ -74,11 +91,15 @@ const series = computed(() => [
   margin-bottom: 1.5rem;
 }
 
+/* Formulär */
 .form {
   display: grid;
-  grid-template-columns: 1fr 80px;
-  gap: 0.75rem 1rem;
-  margin-bottom: 2rem;
+  grid-template-columns: 1fr auto;
+  gap: 0.5rem 1rem;
+  margin-bottom: 1.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .form-row {
@@ -87,6 +108,7 @@ const series = computed(() => [
 
 label {
   font-weight: 500;
+  white-space: nowrap;
 }
 
 input {
@@ -94,6 +116,7 @@ input {
   border-radius: 6px;
   border: 1px solid #cbd5e1;
   text-align: center;
+  width: 60px;
 }
 
 input:focus {
@@ -102,4 +125,36 @@ input:focus {
   box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
 }
 
+/* Knapp */
+.button-container {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+button {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #2563eb;
+}
+
+/* Responsiv justering */
+@media (max-width: 500px) {
+  .form {
+    grid-template-columns: 1fr 50px;
+    gap: 0.5rem 0.5rem;
+  }
+
+  input {
+    width: 50px;
+  }
+}
 </style>

@@ -66,7 +66,7 @@ const series = reactive([
 
 <template>
   <div class="wather-vy">
-    <h1>Temperatur i Mariehamn (senaste 9 dagarna)</h1>
+    <h1>Temperatur i Mariehamn (senaste 10 dagarna)</h1>
 
     <p v-if="loading">Laddar väderdata...</p>
     <p v-if="error">{{ error }}</p>
