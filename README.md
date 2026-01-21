@@ -26,7 +26,7 @@ Detta projekt är en Vue-baserad webbapplikation som innehåller två separata v
 * **Vue Router**
 * **Chart.js** (eller motsvarande diagram-bibliotek)
 * **Open-Meteo API**
-* JavaScript (ES6)
+* JavaScript 
 * HTML & CSS
 
 ---
@@ -75,7 +75,7 @@ Väderdata hämtas från **Open-Meteo**:
 
 * Plats: Mariehamn
 * Data: Daglig max- och min-temperatur
-* Tidsperiod: Senaste 9 dagarna
+* Tidsperiod: Senaste 10 dagarna
 * Ingen API-nyckel krävs
 
 ---
